@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOSIS-Defeso | 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+
+        :root {
+            --primary: #2563eb;
+            --primary-light: rgba(219, 234, 254, 0.5);
+            --primary-dark: #1d4ed8;
+            --accent: #38bdf8;
+            --bg-gradient: linear-gradient(135deg, #e0e7ff 0%, #f1f5f9 100%);
+            --text-main: #1e293b;
+            --text-muted: #475569;
+            --glass: rgba(255, 255, 255, 0.4);
+            --shadow-frame: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: var(--bg-gradient);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .shape {
+            position: fixed;
+            z-index: -1;
+            filter: blur(100px);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: move 20s infinite alternate;
+        }
+        .shape-1 { top: -10%; left: -5%; width: 500px; height: 500px; background: #6366f1; }
+        .shape-2 { bottom: -10%; right: -5%; width: 450px; height: 450px; background: #38bdf8; }
+
+        @keyframes move {
+            from { transform: translate(0, 0); }
+            to { transform: translate(100px, 50px); }
+        }
+
+        .tech-icon {
+            position: fixed;
+            color: var(--primary);
+            opacity: 0.15;
+            font-weight: 800;
+            font-size: 5rem;
+            z-index: -1;
+        }
+        .icon-1 { top: 10%; right: 5%; transform: rotate(15deg); }
+        .icon-2 { bottom: 15%; left: 5%; transform: rotate(-15deg); }
+
+        .main-container {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 40px;
+            width: 100%;
+            max-width: 1280px;
+            padding: 60px;
+            box-shadow: var(--shadow-frame);
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
+            position: relative;
+            align-items: start;
+        }
+
+        .nav-header {
+            position: absolute;
+            top: 40px;
+            left: 60px;
+            z-index: 10;
+        }
+
+        .btn-back {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            color: var(--primary);
+            transform: translateX(-4px);
+        }
+
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 16px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: var(--primary);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            width: fit-content;
+            backdrop-filter: blur(5px);
+        }
+
+        .content-section h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            letter-spacing: -2px;
+        }
+
+        .content-section p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        .content-section strong {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .img-box, .video-box {
+            position: relative;
+            background: var(--primary-light);
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-frame);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+        }
+
+        .img-box { height: 240px; cursor: pointer; }
+        .img-box:hover { transform: translateY(-8px); border-color: var(--primary); }
+        
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        /* AJUSTE DE QUALIDADE DO VÍDEO */
+        .video-box {
+            grid-column: span 2;
+            height: 420px; /* Aumentei um pouco para não comprimir */
+            background: #000;
+        }
+
+        .video-box video {
+            width: 100%;
+            height: 100%;
+            border-radius: 14px;
+            display: block;
+            /* Tenta manter a qualidade original sem interpolação agressiva */
+            object-fit: contain; 
+            image-rendering: auto;
+            image-rendering: -webkit-optimize-contrast;
+            transform: translateZ(0); /* Força aceleração de hardware */
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding: 20px;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 95%;
+            max-height: 90vh;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1100px) {
+            .main-container { grid-template-columns: 1fr; padding: 100px 40px 40px; gap: 50px; }
+            .tech-icon { display: none; }
+            .content-section { padding-top: 0; }
+        }
+
+        @media (max-width: 600px) {
+            .main-container { border-radius: 0; padding: 80px 20px 20px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+            .video-box { grid-column: span 1; height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="tech-icon icon-1">&lt;/&gt;</div>
+    <div class="tech-icon icon-2">{ ; }</div>
+
+    <main class="main-container">
+        <header class="nav-header">
+            <a href="index.html#projetos" class="btn-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                VOLTAR
+            </a>
+        </header>
+
+        <section class="content-section">
+            <div class="badge">Projeto Acadêmico</div>
+            <h1>ECOSIS<br>Defeso</h1>
+            <p>
+                O <strong>ECOSIS-Defeso</strong> é uma plataforma educativa e interativa desenvolvida para informar, conscientizar e apoiar pescadores e a sociedade sobre o <strong>Período de Defeso</strong>. O sistema foi projetado com foco em usabilidade, utilizando <strong>PHP</strong>, <strong>MySQL</strong> e um Front-end moderno em <strong>HTML5, CSS3, Bootstrap 5 e JavaScript</strong>.<br><br>
+
+                Conta com um <strong>módulo de autenticação</strong> seguro, <strong>Feed informativo</strong>, e seções dedicadas às <strong>Regras do Defeso</strong>. O usuário pode realizar uma <strong>Simulação de Elegibilidade</strong>, cujos dados são processados no banco <strong>site_defeso</strong> com tabelas normalizadas.<br><br>
+
+                O projeto implementa recursos avançados como <strong>VIEWS</strong> para classificação automática, <strong>Stored Procedures</strong> para relatórios e <strong>TRIGGERS</strong> de auditoria, garantindo a <strong>integridade e transparência dos dados</strong> em todo o ciclo de vida da informação.
+            </p>
+        </section>
+
+        <section class="gallery-grid">
+            <div class="img-box" onclick="openModal(this)"><img src="imagem/principal.png" alt="Interface Principal"></div>
+            <div class="img-box" onclick="openModal(this)"><img src="imagem/defeso1.png" alt="Interface 1"></div>
+
+            <div class="video-box">
+                <video controls preload="metadata" playsinline>
+                    <source src="videos/defeso.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos.
+                </video>
+            </div>
+
+            <div class="img-box" onclick="openModal(this)"><img src="imagem/central.png" alt="Interface 2"></div>
+            <div class="img-box" onclick="openModal(this)"><img src="imagem/defeso2.png" alt="Interface 3"></div>
+        </section>
+    </main>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
+
+    <script>
+        function openModal(element) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("imgFull");
+            modal.style.display = "flex";
+            modalImg.src = element.getElementsByTagName('img')[0].src;
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Jonatas Gabriel | Portfolio</title>
+
+    <link rel="icon" type="image/x-icon" href="imagem/Gemini_Generated_Image_o54083o54083o540.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="sidebar">
+        <div id="sidebar-particles"></div>
+        <div class="nav-center">
+            <div class="profile-container">
+                <img src="imagem/perfil.jpeg" alt="Jonatas Gabriel" class="profile-pic" id="profile-trigger">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#sobre" class="nav-item" data-pt="SOBRE" data-en="ABOUT">SOBRE</a></li>
+                <li><a href="#tecnologias" class="nav-item" data-pt="TECNOLOGIAS" data-en="SKILLS">TECNOLOGIAS</a></li>
+                <li><a href="#projetos" class="nav-item" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a></li>
+                <li><a href="#educacao" class="nav-item" data-pt="EDUCAÇÃO" data-en="EDUCATION">EDUCAÇÃO</a></li>
+                <li><a href="#contato" class="nav-item" data-pt="CONTATO" data-en="CONTACT">CONTATO</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="lang-switcher">
+                <img src="https://flagcdn.com/w40/br.png" alt="PT" class="lang-btn" onclick="setLanguage('pt')">
+                <img src="https://flagcdn.com/w40/gb.png" alt="EN" class="lang-btn" onclick="setLanguage('en')">
+            </div>
+
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle" class="theme-checkbox">
+                <label for="theme-toggle" class="theme-label">
+                    <i class="fas fa-sun sun-icon"></i>
+                    <i class="fas fa-moon moon-icon"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="cv-widget" data-aos="fade-left">
+            <a href="curriculo/Jonatas_Gabriel_Costa_Santos_Curriculo.pdf" download class="cv-button">
+                <i class="fas fa-file-download"></i>
+                <div class="cv-text">
+                    <span class="cv-main-label" data-pt="BAIXAR CV" data-en="DOWNLOAD CV">BAIXAR CV</span>
+                    <span class="cv-date" data-pt="Atualizado Dez/2025" data-en="Updated Dec/2025">Atualizado Dez/2025</span>
+                </div>
+            </a>
+        </div>
+
+        <section id="sobre" class="section" data-aos="fade-up">
+            <h1 class="main-title">JONATAS GABRIEL</h1>
+            <a href="mailto:jonatasgcs40@gmail.com" class="email-link">jonatasgcs40@gmail.com</a>
+            <div class="bio-text">
+                <p data-pt="Sou desenvolvedor <strong>Back-end</strong> com foco no ecossistema <strong>JavaScript</strong>. Tenho experiência prática em projetos pessoais utilizando <strong>Node.js</strong>, <strong>Express</strong> e <strong>MySQL</strong>, com ênfase na criação de <strong>APIs REST</strong>, modelagem de banco de dados e versionamento de código com <strong>Git</strong>." 
+                   data-en="I am a <strong>Back-end</strong> developer focused on the <strong>JavaScript</strong> ecosystem. I have practical experience in personal projects using <strong>Node.js</strong>, <strong>Express</strong>, and <strong>MySQL</strong>, emphasizing <strong>REST API</strong> creation, database modeling, and versioning with <strong>Git</strong>.">
+                    Sou desenvolvedor <strong>Back-end</strong> com foco no ecossistema <strong>JavaScript</strong>. Tenho experiência prática em projetos pessoais utilizando <strong>Node.js</strong>, <strong>Express</strong> e <strong>MySQL</strong>, com ênfase na criação de <strong>APIs REST</strong>, modelagem de banco de dados e versionamento de código com <strong>Git</strong>.
+                </p>
+                <br>
+                <p data-pt="Também estou avançando em <strong>TypeScript</strong> e nos fundamentos de <strong>Arquitetura</strong> e <strong>Boas Práticas</strong> no Back-end, incluindo organização de projetos e princípios de <strong>POO</strong>. Possuo ainda base em <strong>Front-end</strong> com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, além de já ter tido contato com <strong>PHP</strong> e <strong>C</strong>. Meu objetivo é evoluir continuamente na área, desenvolvendo soluções seguras, escaláveis e bem estruturadas."
+                   data-en="I am also advancing in <strong>TypeScript</strong> and <strong>Architecture</strong> fundamentals and <strong>Best Practices</strong> in Back-end, including project organization and <strong>OOP</strong> principles. I also have a foundation in <strong>Front-end</strong> with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, besides having contact with <strong>PHP</strong> and <strong>C</strong>. My goal is to continuously evolve, developing secure, scalable, and well-structured solutions.">
+                    Também estou avançando em <strong>TypeScript</strong> e nos fundamentos de <strong>Arquitetura</strong> e <strong>Boas Práticas</strong> no Back-end, incluindo organização de projetos e princípios de <strong>POO</strong>. Possuo ainda base em <strong>Front-end</strong> com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, além de já ter tido contato com <strong>PHP</strong> e <strong>C</strong>. Meu objetivo é evoluir continuamente na área, desenvolvendo soluções seguras, escaláveis e bem estruturadas.
+                </p>
+                <br>
+                <div class="soft-skills">
+                    <h3 class="soft-skills-title" data-pt="🧠 Soft skills" data-en="🧠 Soft skills">🧠 Soft skills</h3>
+                    <ul class="soft-skills-list">
+                        <li data-pt=" <b>Organização</b>" data-en=" <b>Organization</b>"> <b>Organização</b></li>
+                        <li data-pt=" <b>Comunicação clara</b>" data-en=" <b>Clear communication</b>"> <b>Comunicação clara</b></li>
+                        <li data-pt=" <b>Facilidade para aprender</b>" data-en=" <b>Quick learner</b>"> <b>Facilidade para aprender</b></li>
+                        <li data-pt=" <b>Trabalho em equipe</b>" data-en=" <b>Teamwork</b>"> <b>Trabalho em equipe</b></li>
+                        <li data-pt=" <b>Persistência e foco</b>" data-en=" <b>Persistence and focus</b>"> <b>Persistência e foco</b></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/jonatas-gabriel-a3842b328" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/jonatasgcs" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+
+        <section id="tecnologias" class="section" data-aos="fade-up">
+            <h2 class="section-title" data-pt="TECNOLOGIAS" data-en="SKILLS">TECNOLOGIAS</h2>
+            <div class="tech-intro">
+                <h3 data-pt="Tecnologias e Ferramentas" data-en="Technologies and Tools">Tecnologias e Ferramentas</h3>
+                <p data-pt="Tecnologias e ferramentas que utilizo no meu dia a dia de estudos e desenvolvimento, com foco principal em Back-end." data-en="Technologies and tools I use in my daily studies and development, with a primary focus on Back-end.">
+                    Tecnologias e ferramentas que utilizo no meu dia a dia de estudos e desenvolvimento, com foco principal em Back-end.
+                </p>
+            </div>
+
+            <div class="tech-groups">
+                <div class="tech-group">
+                    <h4 data-pt="🔹 Linguagens" data-en="🔹 Languages">🔹 Linguagens</h4>
+                    <div class="tech-icons-grid">
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JS"><span>JavaScript</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TS"><span>TypeScript</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/php/777BB4" alt="PHP"><span>PHP</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/c/A8B9CC" alt="C"><span>C</span></div>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h4 data-pt="🔹 Back-end" data-en="🔹 Back-end">🔹 Back-end</h4>
+                    <div class="tech-icons-grid">
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node"><span>Node.js</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/express/000000" alt="Express"><span>Express</span></div>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h4 data-pt="🔹 Banco de Dados" data-en="🔹 Databases">🔹 Banco de Dados</h4>
+                    <div class="tech-icons-grid">
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><span>MySQL</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/sqlite/003B57" alt="SQL"><span>SQL (Queries)</span></div>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h4 data-pt="🔹 Ferramentas / DevTools" data-en="🔹 Tools / DevTools">🔹 Ferramentas / DevTools</h4>
+                    <div class="tech-icons-grid">
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><span>Git</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/github/181717" alt="GitHub"><span>GitHub</span></div>
+                        <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode"><span>VS Code</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/webstorm/000000" alt="WebStorm"><span>WebStorm</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/mysql/00A894" alt="MySQL Workbench"><span>MySQL Workbench</span></div>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h4 data-pt="🔹 Front-end" data-en="🔹 Front-end">🔹 Front-end</h4>
+                    <div class="tech-icons-grid">
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML"><span>HTML</span></div>
+                        <div class="tech-item"><img src="https://unpkg.com/simple-icons@v13/icons/css3.svg" width="24" alt="CSS"><span>CSS</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JS"><span>JavaScript</span></div>
+                        <div class="tech-item"><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><span>React (em estudo)</span></div>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h4 data-pt="🔹 Conceitos" data-en="🔹 Concepts">🔹 Conceitos</h4>
+                    <ul class="concept-list">
+                        <li data-pt="Arquitetura MVC" data-en="MVC Architecture">POO</li>
+                        <li data-pt="APIs REST" data-en="REST APIs">APIs REST</li>
+                        <li data-pt="Arquitetura MVC" data-en="MVC Architecture">Banco de dados relacionais</li>
+                        <li data-pt="Arquitetura MVC" data-en="MVC Architecture">versionamento com Git</li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+   <!-- ========================================================================================== -->      
+
+<style>
+    /* Estilos das Novas Tags de Categoria */
+    .category-tag {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 800;
+        padding: 2px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        color: #fff;
+    }
+    .cat-pessoal { background-color: #f39c12; }
+    .cat-academico { background-color: #3498db; }
+    .cat-freelance { background-color: #9b59b6; }
+
+    /* Estilos dos Filtros */
+    .project-filters {
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filter-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+        max-width: 800px; 
+    }
+
+    .filter-label {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--text-gray);
+        min-width: 100px;
+    }
+
+    .filter-btn {
+        padding: 6px 15px;
+        border: 1px solid var(--border-tech);
+        background: var(--card-bg);
+        color: var(--text-main);
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 0.75rem;
+        transition: 0.3s;
+        white-space: nowrap;
+    }
+
+    .filter-btn.active {
+        background: var(--navy-blue);
+        color: #fff;
+        border-color: var(--navy-blue);
+    }
+
+    /* Ajuste do Card para evitar que fique cortado */
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+    }
+
+    .project-card {
+        background: var(--card-bg);
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid var(--border-tech);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        /* Reduzido para garantir visibilidade total */
+        width: 300px; 
+        max-width: 100%;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 150px; /* Reduzido de 180px */
+        overflow: hidden;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-info {
+        padding: 15px; /* Reduzido o respiro interno */
+        flex-grow: 1;
+    }
+
+    .project-name {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+
+    .project-count {
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: var(--text-titles);
+        margin-bottom: 15px;
+    }
+
+    .project-card.hidden {
+        display: none !important;
+    }
+
+
+
+</style>
+
+<section id="projetos" class="section" data-aos="fade-up">
+    <h2 class="section-title" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</h2>
+    
+    <div class="project-filters">
+        <div class="filter-group">
+            <span class="filter-label">CATEGORIA:</span>
+            <button class="filter-btn active" onclick="filterProjects('all', 'category', this)">Todos</button>
+            <button class="filter-btn" onclick="filterProjects('pessoal', 'category', this)">Pessoal</button>
+            <button class="filter-btn" onclick="filterProjects('academico', 'category', this)">Acadêmico</button>
+            <button class="filter-btn" onclick="filterProjects('freelance', 'category', this)">Freelance</button>
+        </div>
+        <div class="filter-group">
+            <span class="filter-label">TECNOLOGIA:</span>
+            <button class="filter-btn active" onclick="filterProjects('all', 'tech', this)">Todas</button>
+            <button class="filter-btn" onclick="filterProjects('HTML5', 'tech', this)">HTML5</button>
+            <button class="filter-btn" onclick="filterProjects('CSS3', 'tech', this)">CSS3</button>
+            <button class="filter-btn" onclick="filterProjects('JavaScript (ES6+)', 'tech', this)">JavaScript (ES6+)</button>
+            <button class="filter-btn" onclick="filterProjects('TypeScript', 'tech', this)">TypeScript</button>
+            <button class="filter-btn" onclick="filterProjects('Node.js', 'tech', this)">Node.js</button>
+            <button class="filter-btn" onclick="filterProjects('Express.js', 'tech', this)">Express.js</button>
+            <button class="filter-btn" onclick="filterProjects('Bootstrap', 'tech', this)">Bootstrap</button>
+            <button class="filter-btn" onclick="filterProjects('PHP', 'tech', this)">PHP</button>
+            <button class="filter-btn" onclick="filterProjects('MySQL', 'tech', this)">MySQL</button>
+            <button class="filter-btn" onclick="filterProjects('APIs REST', 'tech', this)">APIs REST</button>
+            <button class="filter-btn" onclick="filterProjects('C', 'tech', this)">C</button>
+            <button class="filter-btn" onclick="filterProjects('Docker', 'tech', this)">Docker</button>
+        </div>
+    </div>
+
+    <div class="project-count" id="project-counter">Mostrando 1 projeto(s)</div>
+
+    
+   <!-- ============================      defeso     ======================================================= -->
+
+    <div class="projects-container">
+        <div class="project-card" data-category="academico" data-tech="JavaScript (ES6+), HTML5, CSS3, PHP, MySQL">
+            <div class="project-image">
+                <img src="imagem/defeso.png" alt="Preview do Projeto">
+            </div>
+            <div class="project-info">
+                <h3 class="project-name">ECOSIS-Defeso</h3>
+                <span class="category-tag cat-academico">Acadêmico</span>
+                
+                <div class="project-tags">
+                    <span class="tag">JavaScript (ES6+)</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                </div>
+                <p class="project-description" data-pt="Plataforma interativa com autenticação, simulação de auxílio-defeso e registro auditável de dados usando PHP, MySQL (Views, Procedures e Triggers) e Bootstrap." data-en="Web system that informs and guides fishermen...">
+                   Plataforma interativa com autenticação, simulação de auxílio-defeso e registro editável de dados usando PHP, MySQL (Views, Procedures e Triggers) e Bootstrap.
+                </p>
+                    <div class="project-actions">
+                        <a href="https://github.com/jonatasgcs/ECOSIS-Defeso" target="_blank" class="btn-action github" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://jonatasgcs.github.io/ECOSIS-Defeso/" target="_blank" class="btn-action site" title="Site">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="ECOSIS.html" target="_blank" class="btn-action more" title="Ver Mais">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+        </div>
+        
+
+   <!-- ================================ novo projeto ================================================= -->
+
+
+
+
+
+        
+
+
+
+
+
+
+
+   <!-- ========================================================================================== -->
+
+</section>
+
+<script>
+    let activeCategory = 'all';
+    let activeTech = 'all';
+
+    function filterProjects(value, type, btn) {
+        // Atualiza o estado visual dos botões
+        const parent = btn.parentElement;
+        parent.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Define o que está sendo filtrado
+        if (type === 'category') activeCategory = value;
+        if (type === 'tech') activeTech = value;
+
+        const cards = document.querySelectorAll('.project-card');
+        let count = 0;
+
+        cards.forEach(card => {
+            const cardCat = card.getAttribute('data-category');
+            // Pegamos as tecnologias e transformamos em um array para busca exata
+            const cardTechs = card.getAttribute('data-tech').split(',').map(t => t.trim());
+            
+            const matchCat = (activeCategory === 'all' || cardCat === activeCategory);
+            const matchTech = (activeTech === 'all' || cardTechs.includes(activeTech));
+
+            if (matchCat && matchTech) {
+                card.classList.remove('hidden');
+                count++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        // Atualiza o contador de projetos visíveis
+        const counter = document.getElementById('project-counter');
+        if(counter) {
+            counter.innerText = `Mostrando ${count} projeto(s)`;
+        }
+    }
+
+</script>
+
+
+   <!-- ========================================================================================== -->
+
+        <section id="educacao" class="section" data-aos="fade-up">
+            <div class="edu-content">
+                <h2 class="section-title" data-pt="EDUCAÇÃO" data-en="EDUCATION">EDUCAÇÃO</h2>
+                <div class="edu-card">
+                    <h3 data-pt="Graduando em Engenharia da Computação / 2027" data-en="Bachelor in Computer Engineering">Graduando em Engenharia da Computação / 2027</h3>
+                    <p data-pt="Universidade CEUMA — São Luís, MA" data-en="CEUMA University — São Luís, Brazil">Universidade CEUMA — São Luís, MA</p>
+                </div>
+            </div>
+            <div class="cv-download-section">
+                <p data-pt="Para saber mais sobre minha trajetória acadêmica e profissional, baixe meu currículo completo no botão abaixo." data-en="To learn more about my academic and professional career, download my full resume at the button below.">
+                    Para saber mais sobre minha trajetória acadêmica e profissional, baixe meu currículo completo no botão abaixo.
+                </p>
+                <a href="curriculo/Jonatas_Gabriel_Costa_Santos_Curriculo.pdf" download class="cv-download-btn">
+                    <i class="fas fa-file-download"></i>
+                    <span data-pt="Baixar Currículo" data-en="Download Resume">Baixar Currículo</span>
+                </a>
+            </div>
+            <div class="certificados-wrapper">
+                <h4 data-pt="Certificações e Cursos" data-en="Certifications and Courses">Certificações e Cursos</h4>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        
+                        <div class="carousel-item"><img src="cursos/Mecânica Computacional.png" alt="Cert 1" class="cert-img" onclick="openCert(this.src)"></div>
+                        <div class="carousel-item"><img src="cursos/python.png" alt="Cert 2" class="cert-img" onclick="openCert(this.src)"></div>
+                        <div class="carousel-item"><img src="cursos/python 2.png" alt="Cert 3" class="cert-img" onclick="openCert(this.src)"></div>
+                        <div class="carousel-item"><img src="cursos/banco de dados.png" alt="Cert 4" class="cert-img" onclick="openCert(this.src)"></div>
+
+                        <div class="carousel-item"><img src="cursos/Mecânica Computacional.png" alt="Cert 1" class="cert-img" onclick="openCert(this.src)"></div>
+                        <div class="carousel-item"><img src="cursos/python.png" alt="Cert 2" class="cert-img" onclick="openCert(this.src)"></div>
+                        <div class="carousel-item"><img src="cursos/python 2.png" alt="Cert 3" class="cert-img" onclick="openCert(this.src)"></div> 
+                        <div class="carousel-item"><img src="cursos/banco de dados.png" alt="Cert 4" class="cert-img" onclick="openCert(this.src)"></div>   
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section id="contato" class="section" data-aos="fade-up">
+    <h2 class="section-title" style="text-align: center;" data-pt="CONTATO" data-en="CONTACT">CONTATO</h2>
+    <div class="contact-center-container">
+        <div class="contact-links-grid-2x2">
+            <a href="https://www.linkedin.com/in/jonatas-gabriel-a3842b328" target="_blank" class="contact-link-card">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/jonatasgcs" target="_blank" class="contact-link-card">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="mailto:jonatasgcs40@gmail.com" class="contact-link-card">
+                <i class="fas fa-envelope"></i>
+                <span>E-mail</span>
+            </a>
+            <a href="https://wa.me/98991636883" target="_blank" class="contact-link-card">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <div class="status-widget">
+        <span class="pulse-dot"></span>
+        <p data-pt="Disponível para novos projetos" data-en="Available for new projects">Disponível para novos projetos</p>
+    </div>
+
+    <div id="image-modal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="full-image">
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
